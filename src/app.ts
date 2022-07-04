@@ -1,9 +1,6 @@
-import express from 'express'
+import add from '@src/math/add'
+import dotenv from 'dotenv-safe'
 
-const app = express()
+dotenv.config()
 
-const PORT = process.env.PORT || 5001
-
-app.listen(PORT, function(){
-	console.log(`App is running on the port ${PORT}`)
-})
+console.log(add(1,2));
